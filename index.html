@@ -65,6 +65,16 @@
         p {
             color: #94a3b8;
             font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .timer-box {
+            background-color: #0f172a;
+            border: 1px dashed #ef4444;
+            color: #ef4444;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
         .btn {
@@ -100,10 +110,41 @@
         <h1>Wicket Call Fix</h1>
         <p>Join our official Telegram channel for live cricket updates & analysis.</p>
 
+        <!-- 15 Second Timer Box -->
+        <div class="timer-box">
+            ⚡ Link Expires In: <span id="timer">00:15</span>
+        </div>
+
         <a href="https://t.me/+9qy16u2uzVgyYTU1" class="btn" onclick="fbq('track', 'Lead');">JOIN TELEGRAM CHANNEL</a>
 
         <div class="disclaimer">Clicking will open Telegram App directly.</div>
     </div>
+
+    <!-- 15 Seconds Timer JavaScript -->
+    <script>
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fifteenSeconds = 15,
+                display = document.querySelector('#timer');
+            startTimer(fifteenSeconds, display);
+        };
+    </script>
 
 </body>
 </html>
