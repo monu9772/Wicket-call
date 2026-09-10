@@ -1,196 +1,109 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wicket Call Fix</title>
-
-  <!-- Meta Pixel Code -->
-  <script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wicket Call Fix</title>
+    <!-- Meta Pixel Code -->
+    <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '899297616422553');
     fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=899297616422553&ev=PageView&noscript=1"/>
-  </noscript>
-  <!-- End Meta Pixel Code -->
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(180deg, #0f3d3e 0%, #051415 100%);
-      color: #ffffff;
-      padding: 20px;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 24px;
-      padding: 30px 20px;
-      width: 100%;
-      max-width: 380px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
-    }
-
-    .badge {
-      display: inline-block;
-      background-color: rgba(46, 125, 50, 0.4);
-      color: #81c784;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-    }
-
-    .logo-container {
-      width: 100px;
-      height: 100px;
-      margin: 0 auto 20px auto;
-      border-radius: 50%;
-      overflow: hidden;
-      background-color: #000;
-      border: 2px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .logo-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .title {
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 10px;
-      letter-spacing: 0.5px;
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: #b0bec5;
-      line-height: 1.4;
-      margin-bottom: 25px;
-    }
-
-    .timer-text {
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-      color: #e0e0e0;
-    }
-
-    .timer-text span {
-      color: #81c784;
-    }
-
-    .btn {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(180deg, #5c2406 0%, #260a00 100%);
-      color: #ffffff;
-      border: 1px solid #ffffff;
-      border-radius: 30px;
-      font-size: 15px;
-      font-weight: bold;
-      text-decoration: none;
-      box-shadow: 0 0 15px rgba(255, 100, 0, 0.2);
-      margin-bottom: 25px;
-      cursor: pointer;
-    }
-
-    .divider {
-      border: none;
-      border-top: 1px dashed rgba(255, 255, 255, 0.15);
-      margin-bottom: 20px;
-    }
-
-    .disclaimer {
-      font-size: 11px;
-      color: #90a4ae;
-      line-height: 1.5;
-    }
-  </style>
+    </script>
+    <!-- End Meta Pixel Code -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+        }
+        .badge {
+            background-color: #3b82f6;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        .logo-container img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #f59e0b;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #22c55e;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            display: block;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #16a34a;
+        }
+        .disclaimer {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="badge">Cricket Updates</div>
-    
-    <div class="logo-container">
-      <!-- Apni Profile/Logo image ka link src="" me daalein -->
-      <img src="https://via.placeholder.com/100" alt="Wicket Call Fix Logo">
+    <div class="card">
+        <div class="badge">Cricket Updates</div>
+        
+        <div class="logo-container">
+            <img src="WhatsApp Image 2026-09-10 at 11.20.39 PM.jpeg" alt="Wicket Call Fix Logo">
+        </div>
+
+        <h1>Wicket Call Fix</h1>
+        <p>Join our official Telegram channel for live cricket updates & analysis.</p>
+
+        <a href="https://t.me/+9qy16u2uzVgyYTU1" class="btn" onclick="fbq('track', 'Lead');">JOIN TELEGRAM CHANNEL</a>
+
+        <div class="disclaimer">Clicking will open Telegram App directly.</div>
     </div>
-
-    <h1 class="title">WICKET CALL FIX 🔥</h1>
-    
-    <p class="subtitle">Honest analysis • Match insights • Community driven</p>
-    
-    <div class="timer-text">
-      FREE JOINING ENDS IN <span id="countdown">16</span>s
-    </div>
-
-    <a href="https://t.me/+9qy16u2uzVgyYTU1" class="btn" onclick="trackClick()">
-      Subscribe Now For Free ✈️
-    </a>
-
-    <hr class="divider">
-
-    <p class="disclaimer">
-      Disclaimer: This channel shares cricket updates, analysis, and general information for fans. It does not promote betting or gambling. No outcomes are guaranteed. Please verify independently and act responsibly.
-    </p>
-  </div>
-
-  <script>
-    // Countdown Timer
-    let timeLeft = 16;
-    const timerElement = document.getElementById('countdown');
-    
-    const timer = setInterval(() => {
-      timeLeft--;
-      if (timeLeft >= 0) {
-        timerElement.textContent = timeLeft;
-      } else {
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    // Pixel Lead Tracking on Button Click
-    function trackClick() {
-      if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead');
-      }
-    }
-  </script>
 
 </body>
 </html>
